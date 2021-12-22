@@ -73,10 +73,11 @@ namespace domashnee_zadanie_no5
 
                 dates.Add(new Date(day, month, year));
                 string datesResult = Date.printDatesList(dates);
-                Text_today_date.Text = datesResult;
+               
                 if (day > 0 && day < 32 && month > 0 && month < 13)
                 {
                     Text_error_date.Text = "Данные введены корректно";
+                    Text_today_date.Text = datesResult;
                 }
                 else
                 {
