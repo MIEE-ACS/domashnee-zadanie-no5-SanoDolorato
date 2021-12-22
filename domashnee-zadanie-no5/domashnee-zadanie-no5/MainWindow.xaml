@@ -8,7 +8,7 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <TextBox Name="text_month" HorizontalAlignment="Left" Margin="70,106,0,0" Text="Месяц" TextWrapping="Wrap" VerticalAlignment="Top" Width="341" Height="25"/>
-        <Button Name="add_date" Content="Добавить" HorizontalAlignment="Left" Margin="70,265,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.058,0.167" Width="340" Height="40" Click="add_date_Click"/>
+        <Button Name="add_date" Content="Добавить" HorizontalAlignment="Left" Margin="70,341,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.058,0.167" Width="340" Height="40" Click="add_date_Click"/>
         <TextBox Name="text_year" HorizontalAlignment="Left" Margin="70,174,0,0" Text="Год" TextWrapping="Wrap" VerticalAlignment="Top" Width="340" Height="25"/>
         <TextBox Name="text_day" HorizontalAlignment="Left" Margin="70,44,0,0" Text="День" TextWrapping="Wrap" VerticalAlignment="Top" Width="341" Height="25"/>
         <TextBox Name="Text_today_date" HorizontalAlignment="Left" Margin="501,44,0,0" Text="Текущая дата" TextWrapping="Wrap" VerticalAlignment="Top" Width="268" Height="87"/>
@@ -18,8 +18,8 @@
         <Button Name="minus_day" Content="-" HorizontalAlignment="Left" Margin="10,46,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.058,0.167" Width="40" Height="23" Click="minus_day_Click"/>
         <Button Name="minus_month" Content="-" HorizontalAlignment="Left" Margin="10,107,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.058,0.167" Width="40" Height="23" Click="minus_month_Click"/>
         <Button Name="minus_year" Content="-" HorizontalAlignment="Left" Margin="10,175,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.058,0.167" Width="40" Height="23" Click="minus_year_Click"/>
-        <TextBox Name="Text_error_date" HorizontalAlignment="Left" Margin="70,331,0,0" Text="Корректность вводимых данных" TextWrapping="Wrap" VerticalAlignment="Top" Width="340" Height="40"/>
-        <Button x:Name="remove_date" Content="Очистить даты" HorizontalAlignment="Left" Margin="429,265,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.058,0.167" Width="340" Height="40" Click="add_date_Click"/>
+        <TextBox Name="Text_error_date" HorizontalAlignment="Left" Margin="501,159,0,0" Text="Корректность вводимых данных" TextWrapping="Wrap" VerticalAlignment="Top" Width="268" Height="40"/>
+        <Button Name="button_remove_date" Content="Очистить даты" HorizontalAlignment="Left" Margin="435,341,0,0" VerticalAlignment="Top" Height="40" Width="340" Click="button_remove_date_Click"/>
 
     </Grid>
 </Window>

@@ -65,12 +65,30 @@ namespace domashnee_zadanie_no5
 
         private void add_date_Click(object sender, RoutedEventArgs e)
         {
-            int day = int.Parse(text_day.Text);
-            int month = int.Parse(text_month.Text);
-            int year = int.Parse(text_year.Text);
-            dates.Add(new Date(day, month, year));
-            string datesResult = Date.printDatesList(dates);
-            Text_today_date.Text = datesResult;
+            try 
+            {
+                int day = int.Parse(text_day.Text);
+                int month = int.Parse(text_month.Text);
+                int year = int.Parse(text_year.Text);
+
+                dates.Add(new Date(day, month, year));
+                string datesResult = Date.printDatesList(dates);
+                Text_today_date.Text = datesResult;
+                if (day > 0 && day < 32 && month > 0 && month < 13)
+                {
+                    Text_error_date.Text = "Данные введены корректно";
+                }
+                else
+                {
+                    Text_error_date.Text = "#Ошибка \n Данные введены не корректно!!";
+                }
+                
+            }
+            catch (System.FormatException)
+            {
+                Text_error_date.Text = "#Ошибка \n Данные введены не корректно!!";
+            }
+            
 
         }
 
@@ -108,6 +126,14 @@ namespace domashnee_zadanie_no5
         {
             int year = int.Parse(text_year.Text);
             text_year.Text = (year - 1).ToString();
+        }
+
+        private void button_remove_date_Click(object sender, RoutedEventArgs e)
+        {
+
+            dates.RemoveAt(dates.Count-1);
+            string datesResult = Date.printDatesList(dates);
+            Text_today_date.Text = datesResult;
         }
     }
 }
